@@ -5,21 +5,23 @@
 class Weave < Formula
   desc "A lightweight, extensible coding agent framework"
   homepage "https://github.com/weave-agent/weave"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
+
+  depends_on "go"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/weave-agent/weave/releases/download/v0.0.1/weave_0.0.1_darwin_amd64.tar.gz"
-      sha256 "1665e18f0cd7c20980183ad9d495f2c14d0bc47a74fe96df7f6bd693bcc79d69"
+      url "https://github.com/weave-agent/weave/releases/download/v0.0.2/weave_0.0.2_darwin_amd64.tar.gz"
+      sha256 "bb9fc8cec60d381302c82bd1bb36b8f8563345f8ee6c0e2e9dafe995e357d0a9"
 
       define_method(:install) do
         bin.install "weave"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/weave-agent/weave/releases/download/v0.0.1/weave_0.0.1_darwin_arm64.tar.gz"
-      sha256 "759048f4ff3b3a312ccd4c2b7297a1c6732e20eaff7fae3323374a08025d0090"
+      url "https://github.com/weave-agent/weave/releases/download/v0.0.2/weave_0.0.2_darwin_arm64.tar.gz"
+      sha256 "f72dc5b98ba96b5bf7fc10ef719fbad01b918d5b26c38ee20a5c7d2ba296a9e1"
 
       define_method(:install) do
         bin.install "weave"
@@ -29,15 +31,15 @@ class Weave < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/weave-agent/weave/releases/download/v0.0.1/weave_0.0.1_linux_amd64.tar.gz"
-      sha256 "64cdf786ced1ff019ea02b51c318493707e88e6a098cc80eb321e5a988c121c1"
+      url "https://github.com/weave-agent/weave/releases/download/v0.0.2/weave_0.0.2_linux_amd64.tar.gz"
+      sha256 "16adc111ac4a843cfc94b44e249058b35b075f379f270a7b56486c141ab5bf89"
       define_method(:install) do
         bin.install "weave"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/weave-agent/weave/releases/download/v0.0.1/weave_0.0.1_linux_arm64.tar.gz"
-      sha256 "b621911ebd9ca5a8d88dcc485a1decb13aca22b875f04e50d364690baa95110c"
+      url "https://github.com/weave-agent/weave/releases/download/v0.0.2/weave_0.0.2_linux_arm64.tar.gz"
+      sha256 "ae11f6c10a0e536d27125422bef58428fdab92843df7430c7dd34fdd45e08720"
       define_method(:install) do
         bin.install "weave"
       end
