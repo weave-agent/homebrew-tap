@@ -13,7 +13,7 @@ class Weave < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/weave-agent/weave/releases/download/v0.0.6/weave_0.0.6_darwin_amd64.tar.gz"
-      sha256 "28c7f66074b3527800b32aa1fb7f255e7a92f0e4239652ccab517ff978f38f9f"
+      sha256 "a78b83bc349fd1eafe51873811d08238f6cf0100d2850d6a2a893de2e9e1b9fe"
 
       define_method(:install) do
         bin.install "weave"
@@ -21,7 +21,7 @@ class Weave < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/weave-agent/weave/releases/download/v0.0.6/weave_0.0.6_darwin_arm64.tar.gz"
-      sha256 "fb79a92938f7b6e57692c102490d9d9c2d874fd85c375e4a3bb837e15543cc09"
+      sha256 "bdc3f048aa25e6142a590348da08b084d29495e2e38ecde93b3685c85043739e"
 
       define_method(:install) do
         bin.install "weave"
@@ -32,14 +32,14 @@ class Weave < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/weave-agent/weave/releases/download/v0.0.6/weave_0.0.6_linux_amd64.tar.gz"
-      sha256 "1dcc0fd6e62ff77f6a21dd4420276655f9453b47cd3cef32ec4c599fa93f940b"
+      sha256 "754ccd1910f243f502521b7a14309907fc58bc97f75f483482e67e3e7c483a97"
       define_method(:install) do
         bin.install "weave"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/weave-agent/weave/releases/download/v0.0.6/weave_0.0.6_linux_arm64.tar.gz"
-      sha256 "6c9fe96ea9a2adcd664c6a618acfc6d172fdc5ed355e1e824e2288950cdb7dad"
+      sha256 "4fc8d709304790d60c898cd181bd6358acc2bcefa8a00efae4dd98b9afd95314"
       define_method(:install) do
         bin.install "weave"
       end
